@@ -1,7 +1,7 @@
 # Mesosphere Installation Notes
-This is for a 4 node (2x [Masters + Slaves] + 2x [Dedicated Slaves]) instance using using RHEL 7 
+This is a simple example of 4 node (2x [Masters + Slaves] + 2x [Dedicated Slaves]) instance using using RHEL 7 
 System V is installed by default, Upstart is not present. 
-Keep in mind everything here is running as ROOT for proof of concept.
+Keep in mind everything here is running as ROOT for example purposes.
 Specific configuration and security settings are beyond the scope of this document.
 
 > Master1: 192.168.1.101 node2 MYID2  
