@@ -1,0 +1,8 @@
+{
+    "id": "mesos-dns",
+    "cmd": "~/go/src/github.com/mesosphere/mesos-dns/mesos-dns -v=1 -config=/etc/mesos/mesos_dns_config.json",
+    "cpus": .11,
+    "mem": 4,
+    "disk": 0,
+    "instances": 1              
+  }
