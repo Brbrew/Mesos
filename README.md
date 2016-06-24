@@ -97,14 +97,12 @@ All other frameworks need to be installed on the agent nodes and ran via MARATHO
 	* `$ sudo yum -y install mesos`
 
 ### Configure instances
-For vSphere clusters, DNS registration occurs only locally. 
-So while the servers recognize each other's DNS (via */etc/hosts*), those servers may not be registered with the global DNS server. 
-For that reason, we force the hostname of each server to be the IP by default.
+Example instance configuration
 
 #### Master Node 1 (Primary)
 
 * Set hostname
-	* `echo 192.168.1.100 | sudo tee /etc/mesos-master/hostname`
+	* `echo <myserver@myhostname.com> | sudo tee /etc/mesos-master/hostname`
 	* Example [/etc/mesos-master/hostname](/etc/mesos-master/hostname)
 
 * Set IP	
@@ -128,7 +126,7 @@ For that reason, we force the hostname of each server to be the IP by default.
 Same as above and for each MASTER node.
 
 * Set hostname
-	* `echo 192.168.1.100 | sudo tee /etc/mesos-master/hostname`
+	* `echo <myserver2@myhostname.com>  | sudo tee /etc/mesos-master/hostname`
 	* Example [/etc/mesos-master/hostname](/etc/mesos-master/hostname)
 
 * Set IP	
@@ -160,6 +158,7 @@ Same as above and for each MASTER node.
 
 * Check mesos Web GUI: 
 	* `http://192.168.1.101:5050`
+	* 
 * Under "Frameworks" in the Web GUI, you should see a marthon framework
 * Test
 	* `$ export MASTER=$(mesos-resolve `cat /etc/mesos/zk` 2>/dev/null)` -- Create local variable; output of ZK (dynamic)
