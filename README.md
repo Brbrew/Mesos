@@ -236,12 +236,12 @@ Note: Slaves DO NOT need Zookeeper installed
  * If you see the following error:
  	> mesos-master.localhostname.invalid-user
  * Run the following:
-	 * Step 1: `$ rm -f /tmp/mesos/meta/agents/latest`
+	 * Step 1: `$ rm -f /tmp/mesos/meta/slaves/latest`
 		 * This ensures agent doesn't recover old live executors.
 	 * Step 2: Restart the agent. 	 
 	 
 ### Important Note - *EVERY TIME* the agent is shut down, be sure to run the following:
- * `$ rm -f /tmp/mesos/meta/agents/latest`
+ * `$ rm -f /tmp/mesos/meta/slaves/latest`
  * This will clear the agent cash and reset the agent node
 
 ### Further Reading
